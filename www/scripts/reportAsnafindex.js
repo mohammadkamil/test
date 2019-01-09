@@ -238,7 +238,7 @@ var daerahid, qareahid;
        
 
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
+alert(1);
     };  function back2() {
         $("#page2").hide();
         $("#page1").show();
@@ -284,6 +284,7 @@ function geocodeLatLng(geocoder, map,lat,lng) {
     // onError Callback receives a PositionError object
     //
     var onSuccess = function (position) {
+		alert(1);
 		alert(position.coords.longitude);
           map = new google.maps.Map(document.getElementById('map'), {
             zoom: 11,
