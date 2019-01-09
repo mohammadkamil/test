@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html id="html">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Jejak Asnaf</title>
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="assets/css/Brands.css">
+
+
+    <link rel="stylesheet" href="assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-registration-form-1.css">
+    <link rel="stylesheet" href="assets/css/responsive-registration-form.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="assets/css/textarea.css">
+    <link rel="stylesheet" href="assets/css/Material-Card.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function int() {
+            $("#page2").hide();
+            $("#page3").hide();
+            $("#page4").hide();
+        }
+
+    </script>
+</head>
+
+<body id="body" onload="int()">
+
+    <div id="wrapper" style="color: rgb(255,255,255);background-color: #313437;">
+        <div class="page-content-wrapper nowcss">
+            <div class="container-fluid mx-auto" style="color:rgb(255,255,255);"><a class="btn btn-flat" role="button" href="index.html" style="margin-right:5%"><i class="fa fa-arrow-left float-left" style="color:rgb(255,255,255);"></i></a><span class="mx-auto" style="font-family:Lato, sans-serif;font-size:120%;margin:auto;">Jejak Asnaf</span></div>
+        </div>
+    </div>
+
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf">
+
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Maklumat Asnaf</h2>
+        <div style="width:100%">
+            <form id="form">
+                <div id="page1">
+                    <div class="group">
+                        <input class="form-control" type="text" required id="nama">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Name *</label>
+                    </div>
+                    <div class="input-group" style="margin:0">
+
+                        <div class="group2">
+                            <input class="form-control" type="number" required id="ic">
+
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="labelStyle">IC(eg:901222011011) *</label>
+                        </div>
+
+                        <div class="input-group-append btncls">
+                            <button class="btn btn-raised btn-info btngrop" type="button" id="btnsemakbyic">Semak</button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <input class="form-control" type="number" required id="reportNoTel">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>No Tel (Asnaf/Pelapor): *</label>
+                    </div>
+                    <!--<div class="group">
+                        <input class="form-control" type="number" required id="ic">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">IC(eg:901222011011) *</label>
+                    </div>-->
+                    <!--<select class="custom-select selectStyle" id="kaum">
+                        <option value="" disabled selected>Pilih Kaum</option>
+
+                        <option value="1">Melayu</option>
+                        <option value="2">Chinese</option>
+                        <option value="3">Indian</option>
+                        <option value="4">Lain-Lain</option>
+                    </select>-->
+                    <!--<div class="group">
+                        <input type="text" required id="ic">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">IC(eg:901222011011)</label>
+                    </div>-->
+                    <select class="custom-select selectStyle" name="jenisBantuan" id="jenisBantuan" style="text-transform:capitalize">
+                        <option value="" disabled selected>Pilih Bantuan</option>
+
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select>
+
+                    <!--<input id="kampung" placeholder="Kampung/Taman" />
+                    <input id="kampung_ID" hidden />-->
+                    <select class="custom-select selectStyle" name="daerah" id="daerah">
+
+                        <option value="" disabled selected>Pilih Daerah *</option>
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select>
+                    <select class="custom-select selectStyle" name="qareah" id="qareah" disabled>
+
+                        <option value="" disabled selected>Pilih Kariah</option>
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select> <select class="custom-select selectStyle" name="amil" id="amil" disabled>
+
+                        <option value="" disabled selected>Pilih Penolong Amil</option>
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select>
+                    <textarea class="form-control form-control-lg" rows="3" placeholder="Huraian" style="margin-bottom:5%;padding:0;height:35%;width:100%;" id="huraian"></textarea>
+                    <button class="btn btn-raised btn-info mx-auto" id="btnhantar" type="button">Hantar</button><button class="btn btn-raised btn-info float-right mx-auto" id="next" type="button">Maklumat Terperinci</button>
+
+                    <!--<button class="btn btn-raised btn-info btn-block" id="btnhantar" type="button">Hantar</button>
+                    <button class="btn btn-raised btn-info btn-block" id="next" type="button" style="margin-top:5%">Maklumat Lebih</button>-->
+                </div>
+
+                <div id="page2">
+                    <select class="custom-select selectStyle" name="fizikal" id="fizikal">
+
+                        <option value="" disabled selected>Keadaan Fizikal</option>
+                        <option value="1">Sihat</option>
+                        <option value="2">Sakit</option>
+                        <option value="3">Cacat</option>
+
+                    </select>
+                    <select class="custom-select selectStyle" name="kerja" id="kerja">
+
+                        <option value="" disabled selected>Bekerja atau Tidak</option>
+                        <option value="1">Bekerja</option>
+                        <option value="2">Tidak Bekerja</option>
+
+                    </select>
+                    <div class="group">
+                        <input class="form-control" type="number" required id="pendapatan">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Pendapatan sebulan</label>
+                    </div> <div class="group">
+                        <input class="form-control" type="number" required id="perbelanjaan">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Perbelanjaan sebulan</label>
+                    </div><div class="group">
+                        <input class="form-control" type="number" required id="tgglsama">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Tanggungan Tinggal Bersama</label>
+                    </div><div class="group">
+                        <input class="form-control" type="number" required id="tgglasing">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Tanggungan Tinggal Berasingan</label>
+                    </div>
+
+                    <button class="btn btn-raised btn-info mx-auto" id="back2" type="button">Back</button><button class="btn btn-raised btn-info float-right mx-auto" id="next2" type="button">Next</button>
+                </div>
+                <div id="page3">
+
+                    <span>Gambar</span>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" width="100%" height="300px"><img src="images/photo.png" style="width:90%;height:280px" id="gambar" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="images/photo.png" style="width:90%;height:280px" id="gambar1" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="images/photo.png" style="width:90%;height:280px" id="gambar2" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="images/photo.png" style="width:90%;height:280px" id="gambar3" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="images/photo.png" style="width:90%;height:280px" id="gambar4" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="images/photo.png" style="width:90%;height:280px" id="gambar5" /></div>
+
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <!--<script>
+                        var swiper = new Swiper('.swiper-container', {
+                            pagination: {
+                                el: '.swiper-pagination',
+                                type: 'fraction',
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        });
+                    </script>-->
+                    <!--<span>Video</span><br />
+                    <video id="btnvideo"></video>-->
+                    <!--<div id="btnvideo" style="width:100%;align-content:c">
+                        <iframe width="560" height="315" allowfullscreen="" frameborder="0" style="width:10%;height:45%;background:url(../images/photo.png) no-repeat center center fixed; background-position: center;background-repeat: no-repeat;background-size: contain;margin:auto;align-self:center" id="video"></iframe>
+                    </div>-->
+
+                    <button class="btn btn-raised btn-info mx-auto" id="back3" type="button">Back</button><button class="btn btn-raised btn-info float-right mx-auto" id="next3" type="button">Next</button>
+                </div>
+                <div id="page4">
+                    <div id="map" style="height:250px"></div>
+                    <span>Alamat</span>
+                    <textarea class="form-control form-control-lg" rows="3" style="margin:5% 0;padding:0;height:35%;width:100%;" id="addres"></textarea>
+
+                    <h6 id="latlng"></h6>
+                    <button class="btn btn-raised btn-info mx-auto" id="back4" type="button">Back</button><button class="btn btn-raised btn-info float-right mx-auto" id="btnsubmit" type="button">Hantar</button>
+
+                    <!--<button class="btn btn-raised btn-info mx-auto" id="back4" type="button">Back</button>-->
+                    <!--<button class="btn btn-raised btn-info float-right mx-auto" id="btnsubmit" type="button">
+                        Submit
+                    </button>-->
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- model to take picture -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="model">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Source Photo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="margin-bottom:5%">
+                        <button class="btn btn-raised btn-info btn-block" type="button" id="camerabtn">
+                            Camera
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-raised btn-info btn-block" id="librarybtn">Photo Library</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- model to take video -->
+    <div class="modal" tabindex="-1" role="dialog" id="model2">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Source Video</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="margin-bottom:5%">
+                        <button class="btn btn-raised btn-info btn-block" type="button" id="cambtn">
+                            Camera
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-raised btn-info  btn-block" id="libbtn">Photo Library</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- model to take video -->
+    <div class="modal" tabindex="-1" role="dialog" id="modellist">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="icdiv">Sejarah Bantuan Asnaf</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modelbody">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="model3">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="lds-facebook" style="margin:auto"><div></div><div></div><div></div></div>
+
+        </div>
+    </div>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrQf8aLgESteUYdyESnqPehsVcU6QUudc"
+            async defer></script>
+   
+    <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/hammer.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/reportAsnafindex.js"></script>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+
+    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            noSwiping: true,
+            noSwipingClass: '.swiper-container',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Asnaf</title>
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="../assets/css/Brands.css">
+    <link rel="stylesheet" href="../assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">-->
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form-1.css">
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="../assets/css/textarea.css">
+    <link rel="stylesheet" href="../assets/css/Material-Card.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        $("#ubah").hide();
+
+    </script>
+</head>
+
+<body id="body">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="list-group ulcss" style="padding:0">
+                <li style="background-color:white;padding:5% 0;display:block"><center><img src="../assets/img/lznk.png" width="100px" height="100px" /></center></li>
+                <!--  <li class="sidebar-brand"> <a href="#" style="font-size:110%;">Home </a></li>-->
+                <li class="" id="home">Memohon Bantuan </li>
+                <li id="sLaporan">Senarai Permohonan </li>
+                <li id="semakLaporan">Semak Status Permohonan </li>
+                <li id="profile">Profile </li>
+                <li id="logout">Daftar Keluar </li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper nowcss">
+            <div class="container-fluid mx-auto" style="color:rgb(255,255,255);"><a class="btn btn-flat" role="button" href="#menu-toggle" id="menu-toggle" style="margin-right:5%"><i class="fa fa-bars float-left" style="color:rgb(255,255,255);"></i></a><span class="mx-auto" style="font-family:Lato, sans-serif;font-size:120%;margin:auto;">Jejak Asnaf</span></div>
+        </div>
+    </div>
+    <div class="detailasnaf">
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Detail Report</h2>
+        <form id="form">
+
+            <div class="card" style="width: 100%;">
+
+                <!--<div class="card-body">
+                    <h1 class="card-title" id="nama">Nama</h1>
+                    <h6 class="card-title" id="ic">IC</h6>
+
+                </div>-->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="nama">status</li>
+                    <li class="list-group-item" id="ic">status</li>
+                    <li class="list-group-item" id="status">status</li>
+                    <!--<li class="list-group-item" id="kaum">kaum</li>-->
+                    <li class="list-group-item" id="jenisbantuan" style="text-transform:capitalize">jenis bantuan</li>
+                    <li class="list-group-item" id="qareah">qareah</li>
+                    <li class="list-group-item" id="ligambar">
+                        <span>Gambar</span>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" id="gambarslide">
+                                <div class="swiper-slide" width="100%" height="250px" id="slide"><img src="../images/photo.png" width="90%" height="240px" id="gambar" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar1" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar2" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar3" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar4" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar5" /></div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" id="lihuraian">
+                        <span>Huraian</span>
+                        <h6 id="huraian"></h6>
+                    </li>
+                    <li class="list-group-item" id="limap"><div id="map" style="height:250px;width:100%"></div></li>
+                    <li class="list-group-item" id="lialamat">
+                        <span>Alamat</span>
+
+                        <h6 id="alamat"></h6>
+                    </li>
+                    <li class="list-group-item" id="latlng"></li>
+                    <li class="list-group-item" id="ubah">
+                        <button class="btn-raised btn-dark btn-block" style="margin:auto" type="button" id="ubahbtn">
+                            Ubah
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </form>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../assets/js/swiper.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrQf8aLgESteUYdyESnqPehsVcU6QUudc"
+            async defer></script>
+    <script src="../assets/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="../scripts/detailReport.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js"></script>-->
+    <script src="../assets/js/Sidebar-Menu.js"></script>
+    <script src="../assets/js/Simple-Slider.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../scripts/bootbox.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            noSwiping: true,
+            noSwipingClass: '.swiper-container',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

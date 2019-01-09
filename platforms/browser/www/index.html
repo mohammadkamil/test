@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Jejak Asnaf</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="assets/css/Material-Card.css">
+    <link rel="stylesheet" href="assets/css/Brands.css">
+    <link rel="stylesheet" href="assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-registration-form-1.css">
+    <link rel="stylesheet" href="assets/css/responsive-registration-form.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="assets/css/textarea.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for device API libraries to load
+        //
+        //if (localStorage.getItem("login") == 1) {
+        //    location.href = "pelapor/reportAsnaf.html";
+        //}
+        function onLoad() {
+            if (localStorage.getItem("login") == 1 && localStorage.getItem("userType") == 1) {
+                location.href = "pelapor/reportAsnaf.html";
+            } else if (localStorage.getItem("login") == 1 && localStorage.getItem("userType") == 2) {
+                location.href = "penolongAmil/listReport.html";
+            } else if (localStorage.getItem("login") == 1 && localStorage.getItem("userType") == 3) {
+                location.href = "lznk/listReport.html";
+            }
+
+        }
+
+        // device APIs are available
+        //
+
+
+    </script>
+
+</head>
+
+<body onload="onLoad()">
+    <div id="wrapper">
+        <div class="page-content-wrapper nowcss">
+            <div class="container-fluid"><span class="d-table mx-auto spanmargin" style="font-family:Lato, sans-serif;font-size:17px;padding:2%;margin:0;">Jejak Asnaf</span></div>
+        </div>
+    </div>
+    <div class="m-auto w-lg-75 w-xl-50 login">
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;margin-bottom:5%">Selamat Datang</h2>
+        <center>
+            <img src="assets/img/lznk.png" width="150px" height="150px" style="margin:auto" />
+
+        </center>
+        <button class="btn btn-raised btn-info btn-block" type="button" style="width: 100%;margin-top: 10%;" id="laporan">Memohon Bantuan</button>
+        <button class="btn btn-raised btn-info btn-block" type="button" style="width: 100%;margin-top: 10%;" id="semak">Semak status Bantuan</button>
+        <button class="btn btn-raised btn-info btn-block" type="button" style="width: 100%;margin-top: 10%;" id="login">Login</button>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <!--<div id="map" style="height:250px"></div>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9yRc-aVVOly_KJpP3VQpqs-kwPEGzo9k&callback=initMap"
+            async defer></script>-->
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+</body>
+</html>

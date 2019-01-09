@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Asnaf</title>
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="../assets/css/Brands.css">
+    <link rel="stylesheet" href="../assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">-->
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form-1.css">
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="../assets/css/textarea.css">
+    <link rel="stylesheet" href="../assets/css/Material-Card.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <!-- Compiled and minified CSS -->
+
+    <style>
+         .swiper-container {
+             width: 100%;
+             height: 100%;
+             margin-left: auto;
+             margin-right: auto;
+         }
+
+         .swiper-slide {
+             text-align: center;
+             font-size: 18px;
+             background: #fff;
+             /* Center slide text vertically */
+             display: -webkit-box;
+             display: -ms-flexbox;
+             display: -webkit-flex;
+             display: flex;
+             -webkit-box-pack: center;
+             -ms-flex-pack: center;
+             -webkit-justify-content: center;
+             justify-content: center;
+             -webkit-box-align: center;
+             -ms-flex-align: center;
+             -webkit-align-items: center;
+             align-items: center;
+         }
+
+    </style>
+</head>
+
+<body id="body">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <!--<ul class="sidebar-nav">
+            <!--  <li class="sidebar-brand"> <a href="#" style="font-size:110%;">Home </a></li>-->
+            <!--<li> <a style="font-size:110%;" id="home">Senarai Laporan </a> <span class="badge badge-secondary">New</span></li>
+            <li> <a style="font-size:110%;" id="sLaporan">Senarai Status Laporan</a></li>
+            <li> <a style="font-size:110%;" id="semakLaporan">Semak Status Laporan </a></li>
+            <li> <a style="font-size:110%;" id="semakasnaf">Semak Asnaf </a></li>-->
+            <!--<li> <a style="font-size:110%;" id="profile">Profile </a></li>-->
+            <!--<li> <a style="font-size:110%;" id="logout">Daftar Keluar </a></li>
+            </ul>-->
+            <ul class="list-group ulcss" style="width:250px;padding:0;">
+                <li style="background-color:white;padding:5% 0;display:block"><center><img src="../assets/img/lznk.png" width="100px" height="100px" /></center></li>
+                <li class=" d-flex justify-content-between align-items-center" id="home"> Senarai Permohonan Baru  <span class="badge badge-primary badge-light" id="newh">14</span></li>
+                <li class=" " id="sLaporan"> Senarai Permohonan Lama</li>
+                <!--<li class="list-group-item  " id="semakLaporan">Semak Status Laporan</li>-->
+                <li class="  " id="semakasnaf"> Semak Asnaf</li>
+                <li class="  " id="logout"> Daftar Keluar </li>
+            </ul>
+
+        </div>
+        <div class="page-content-wrapper nowcss">
+            <div class="container-fluid mx-auto" style="color:rgb(255,255,255);">
+                <a class="btn btn-flat" role="button" href="#menu-toggle" id="menu-toggle" style="margin-right:5%">
+                    <i class="fa fa-bars float-left" style="color:rgb(255,255,255);"></i>
+                </a>
+                <span class="mx-auto" style="font-family:Lato, sans-serif;font-size:120%;margin:auto;">Jejak Asnaf</span>
+                <button class="btn btn-raised btn-info btn-sm " style="margin-left:10%;display:none;margin-bottom:0" id="semakbyic">
+                    Semak By IC
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="pa_listreport">
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Report</h2>
+        <div class="list-group " id="list">
+
+        </div>
+    </div>
+
+
+    <div class="detailasnaf" id="pa_detailreport">
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Detail Report</h2>
+        <form id="form" style="overflow-y:scroll">
+
+            <div class="card" style="width: 100%;">
+
+                <div class="card-body">
+                    <h5 class="card-title" id="nama">Nama</h5>
+                    <h6 class="card-title" id="ic">IC</h6>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="status">status</li>
+                    <li class="list-group-item" id="jenisbantuan" style="text-transform:uppercase">jenis bantuan</li>
+                    <li class="list-group-item" id="qareah">qareah</li>
+                    <li class="list-group-item" id="ligambar">
+                        <span>Gambar</span>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" id="gambarslide">
+                                <div class="swiper-slide" width="100%" height="250px" id="slide"><img src="../images/photo.png" width="90%" height="240px" id="gambar" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar1" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar2" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar3" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar4" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar5" /></div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" id="lihuraian">
+                        <span>Huraian</span>
+                        <h6 id="huraian"></h6>
+                    </li>
+                    <li class="list-group-item" id="limap"><div id="map" style="height:250px;width:100%"></div></li>
+                    <li class="list-group-item" id="lialamat">
+                        <span>Alamat</span>
+
+                        <h6 id="alamat"></h6>
+                    </li>
+                    <li class="list-group-item" id="latlng"></li>
+                    <li class="" id="ubah">
+                        <!--<button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="pa_ambil">
+                            Ambil
+                        </button>-->
+                        <select class="custom-select selectStyle mr-sm-2" id="statusupdate">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Sokong</option>
+                            <option value="2">Tidak Sokong</option>
+                            <option value="3">Laporan Berganda</option>
+                            <option value="3">Tidak Berkaitan</option>
+                        </select>
+                        <!--<div class="btn-group" role="group">
+                            <button type="button" class="btn btn-raised btn-dark">Sokong</button>
+                            <button type="button" class="btn btn-raised btn-dark">Tidak Sokong</button>
+                            <button type="button" class="btn btn-raised btn-dark">Laporan Berganda</button>
+                            <button type="button" class="btn btn-raised btn-dark">Tidak Berkaitan</button>
+                        </div>-->
+                        <button type="button" class="btn btn-raised btn-dark btn-block" id="pa_sokong">Hantar</button>
+                        <!--<button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="pa_sokong">
+                            Sokong
+                        </button>
+                        <button class="btn btn-raised btn-dark btn-block" style="margin:auto;margin-top:5%" type="button" id="pa_Xlayak">
+                            Tidak Layak
+                        </button>-->
+                    </li>
+
+                </ul>
+
+            </div>
+        </form>
+    </div>
+    <!-- senarai laporan diambil -->
+    <!-- edit report -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="pa_editreport">
+
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Maklumat Asnaf</h2>
+        <div style="width:100%">
+            <form id="form">
+                <div id="page1">
+                    <div class="group">
+                        <input class="form-control" type="text" required id="edit_nama">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Name *</label>
+                    </div>
+                    <div class="input-group" style="margin:0">
+
+                        <div class="group2">
+                            <input class="form-control" type="number" required id="edit_ic">
+
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="labelStyle">IC(eg:901222011011) *</label>
+                        </div>
+
+                        <div class="input-group-append btncls">
+                            <button class="btn btn-raised btn-info btngrop" type="button" id="edit_btnsemakbyic">Semak</button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <input class="form-control" type="number" required id="edit_reportNoTel">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>No Tel (Asnaf/Pelapor):</label>
+                    </div>
+                    <!--<div class="group">
+                        <input class="form-control" type="number" required id="ic">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">IC(eg:901222011011) *</label>
+                    </div>-->
+                    <!--<select class="custom-select selectStyle" id="kaum">
+                        <option value="" disabled selected>Pilih Kaum</option>
+
+                        <option value="1">Melayu</option>
+                        <option value="2">Chinese</option>
+                        <option value="3">Indian</option>
+                        <option value="4">Lain-Lain</option>
+                    </select>-->
+                    <!--<div class="group">
+                        <input type="text" required id="ic">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">IC(eg:901222011011)</label>
+                    </div>-->
+
+                    <select class="custom-select selectStyle " name="edit_jenisBantuan" id="edit_jenisBantuan" style="text-transform:capitalize">
+                        <option value="" disabled selected>Pilih Bantuan</option>
+
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select>
+
+                    <!--<input id="kampung" placeholder="Kampung/Taman" />
+                    <input id="kampung_ID" hidden />-->
+                    <select class="custom-select selectStyle" name="edit_daerah" id="edit_daerah" disabled>
+
+                        <option value="" disabled selected>Pilih Daerah</option>
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select>
+                    <select class="custom-select selectStyle" name="edit_qareah" id="edit_qareah" disabled>
+
+                        <option value="" disabled selected>Pilih Kariah</option>
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select> <select class="custom-select selectStyle" name="edit_amil" id="edit_amil" disabled>
+
+                        <option value="" disabled selected>Pilih Penolong Amil</option>
+                        <!--<option value="1">Rumah</option>
+                        <option value="2">Modal Bisnes</option>
+                        <option value="3">Bantuan Perubatan</option>
+                        <option value="4">Bantuan Sara hidup</option>-->
+                    </select>
+
+                    <textarea class="form-control form-control-lg" rows="3" placeholder="Huraian" style="margin-bottom:5%;padding:0;height:35%;width:100%;" id="edit_huraian"></textarea>
+                    <div id="divbutton1">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example" style="margin:auto">
+                                <!--<button type="button" class="btn btn-secondary" id="back">Back</button>-->
+                                <button type="button" class="btn btn-raised btn-warning" id="edit_btncancel">cancel</button>
+                                <button type="button" class="btn  btn-raised btn-info" id="edit_next">Maklumat Terperinci</button>
+                            </div>
+                        </center>
+                    </div>
+
+
+                    <!--<button class="btn btn-raised btn-info btn-block" id="btnhantar" type="button">Hantar</button>
+                    <button class="btn btn-raised btn-info btn-block" id="next" type="button" style="margin-top:5%">Maklumat Lebih</button>-->
+                </div>
+
+                <div id="page2">
+                    <select class="custom-select selectStyle" name="edit_fizikal" id="edit_fizikal">
+
+                        <option value="" disabled selected>Keadaan Fizikal</option>
+                        <option value="1">Sihat</option>
+                        <option value="2">Sakit</option>
+                        <option value="3">Cacat</option>
+
+                    </select>
+                    <select class="custom-select selectStyle" name="edit_kerja" id="edit_kerja">
+
+                        <option value="" disabled selected>Bekerja atau Tidak</option>
+                        <option value="1">Bekerja</option>
+                        <option value="2">Tidak Bekerja</option>
+
+                    </select>
+                    <div class="group">
+                        <input class="form-control" type="number" required id="edit_pendapatan">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Pendapatan sebulan</label>
+                    </div> <div class="group">
+                        <input class="form-control" type="number" required id="edit_perbelanjaan">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Perbelanjaan sebulan</label>
+                    </div><div class="group">
+                        <input class="form-control" type="number" required id="edit_tgglsama">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Tanggungan Tinggal Bersama</label>
+                    </div><div class="group">
+                        <input class="form-control" type="number" required id="edit_tgglasing">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Jumlah Tanggungan Tinggal Berasingan</label>
+                    </div>
+                    <div id="divbutton1">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example" style="margin:auto">
+                                <!--<button type="button" class="btn btn-secondary" id="back">Back</button>-->
+                                <button class="btn btn-raised btn-info mx-auto" id="edit_back2" type="button">Back</button>
+
+                                <button type="button" class="btn btn-raised btn-warning" id="edit_btncancel2">cancel</button>
+                                <button class="btn btn-raised btn-info float-right mx-auto" id="edit_next2" type="button">Gambar</button>
+                            </div>
+                        </center>
+                    </div>
+                    <!--<button class="btn btn-raised btn-info mx-auto" id="edit_back2" type="button">back</button><button class="btn btn-raised btn-info float-right mx-auto" id="edit_next2" type="button">Next</button>-->
+
+                </div>
+                <div id="page3">
+
+                    <span>Gambar</span>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" width="100%" height="300px"><img src="../images/photo.png" style="width:90%;height:280px" id="edit_gambar" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="../images/photo.png" style="width:90%;height:280px" id="edit_gambar1" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="../images/photo.png" style="width:90%;height:280px" id="edit_gambar2" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="../images/photo.png" style="width:90%;height:280px" id="edit_gambar3" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="../images/photo.png" style="width:90%;height:280px" id="edit_gambar4" /></div>
+                            <div class="swiper-slide" width="100%" height="300px"><img src="../images/photo.png" style="width:90%;height:280px" id="edit_gambar5" /></div>
+
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <!--<script>
+                        var swiper = new Swiper('.swiper-container', {
+                            pagination: {
+                                el: '.swiper-pagination',
+                                type: 'fraction',
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        });
+                    </script>-->
+                    <!--<span>Video</span><br />
+                    <video id="btnvideo"></video>-->
+                    <!--<div id="btnvideo" style="width:100%;align-content:c">
+                        <iframe width="560" height="315" allowfullscreen="" frameborder="0" style="width:10%;height:45%;background:url(../images/photo.png) no-repeat center center fixed; background-position: center;background-repeat: no-repeat;background-size: contain;margin:auto;align-self:center" id="video"></iframe>
+                    </div>-->
+                    <div id="divbutton1">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example" style="margin:auto">
+                                <!--<button type="button" class="btn btn-secondary" id="back">Back</button>-->
+                                <button class="btn btn-raised btn-info mx-auto" id="edit_back3" type="button">Back</button>
+
+                                <button type="button" class="btn btn-raised btn-warning" id="edit_btncancel3">cancel</button>
+                                <button class="btn btn-raised btn-info float-right mx-auto" id="edit_next3" type="button">Alamat</button>
+                            </div>
+                        </center>
+                    </div>
+                    <!--<button class="btn btn-raised btn-info mx-auto" id="edit_back3" type="button">Back</button><button class="btn btn-raised btn-info float-right mx-auto" id="edit_next3" type="button">Next</button>-->
+                </div>
+                <div id="page4">
+                    <div id="map2" style="height:250px"></div>
+                    <span>Alamat</span>
+                    <textarea class="form-control form-control-lg" rows="3" style="margin:5% 0;padding:0;height:35%;width:100%;" id="edit_addres"></textarea>
+
+                    <h6 id="edit_latlng"></h6>
+                    <!--<button class="btn btn-raised btn-info mx-auto" id="edit_back4" type="button">Back</button><button class="btn btn-raised btn-info float-right mx-auto" id="edit_btnsubmit" type="button">Hantar</button>-->
+                    <!--<div class="btn-group" role="group" style="width:100%">
+                        <button type="button" id="back4" class="btn btn-secondary">Back</button>
+                        <button type="button" id="btnsubmit" class="btn btn-secondary">Submit</button>
+                    </div>-->
+                    <!--<button class="btn btn-raised btn-info mx-auto" id="back4" type="button">Back</button>
+                    <button class="btn btn-raised btn-info float-right mx-auto" id="btnsubmit" type="button">
+                        Submit
+                    </button>-->
+                    <div id="divbutton1">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example" style="margin:auto">
+                                <!--<button type="button" class="btn btn-secondary" id="back">Back</button>-->
+                                <button class="btn btn-raised btn-info mx-auto" id="edit_back4" type="button">Back</button>
+
+                                <button type="button" class="btn btn-raised btn-warning" id="edit_btncancel4">cancel</button>
+                                <button class="btn btn-raised btn-info float-right mx-auto" id="edit_btnsubmit" type="button">Hantar</button>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <!--<div id="divbutton" style="overflow-x:scroll">
+                    <center>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-raised btn-info" id="back2">Back</button>
+                            <button type="button" class="btn  btn-raised btn-info" id="next1">Maklumat<br /> terperinci</button>
+                            <button type="button" class="btn  btn-raised btn-info" id="next2">Gambar</button>
+                            <button type="button" class="btn  btn-raised btn-info" id="next3">Alamat</button>
+                            <button type="button" class="btn  btn-raised btn-info" id="btnsubmit">Hantar</button>
+                        </div>
+                    </center>
+                </div>-->
+
+            </form>
+        </div>
+
+    </div>
+    <!-- model to take picture -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="model">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Source Photo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="margin-bottom:5%">
+                        <button class="btn btn-raised btn-info btn-block" type="button" id="camerabtn">
+                            Camera
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-raised btn-info btn-block" id="librarybtn">Photo Library</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit report -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="pa_listreportambil">
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:25px;margin:0;">Status Permohonan</h2>
+        <div class="list-group " id="listambil">
+
+        </div>
+    </div>
+
+
+    <!--<div class="detailasnaf" id="pa_detailreportambil">
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Detail Report</h2>
+        <form id="form" style="overflow-y:scroll">
+
+            <div class="card" style="width: 100%;">
+
+                <div class="card-body">
+                    <h5 class="card-title" id="nama">Nama</h5>
+                    <h6 class="card-title" id="ic">IC</h6>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="status">status</li>
+                    <li class="list-group-item" id="kaum">kaum</li>
+                    <li class="list-group-item" id="jenisbantuan" style="text-transform:uppercase">jenis bantuan</li>
+                    <li class="list-group-item" id="qareah">qareah</li>
+                    <li class="list-group-item" id="ligambar">
+                        <span>Gambar</span>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" id="gambarslide">
+                                <div class="swiper-slide" width="100%" height="250px" id="slide"><img src="../images/photo.png" width="90%" height="240px" id="gambar" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar1" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar2" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar3" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar4" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar5" /></div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" id="lihuraian">
+                        <span>Huraian</span>
+                        <h6 id="huraian"></h6>
+                    </li>
+                    <li class="list-group-item" id="limap"><div id="map" style="height:250px;width:100%"></div></li>
+                    <li class="list-group-item" id="lialamat">
+                        <span>Alamat</span>
+
+                        <h6 id="alamat"></h6>
+                    </li>
+                    <li class="list-group-item" id="latlng"></li>
+                    <li class="list-group-item" id="ubah">
+                        <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="pa_ambil">
+                            Ambil
+                        </button><button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="pa_sokong">
+                            Sokong
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </form>
+    </div>-->
+    <!-- senarai laporan diambil -->
+    <!-- semak status -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="pa_semakstatus">
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Semak Laporan</h2>
+        <div style="width:100%;">
+            <div id="pa_semakDiv">
+                <div class="input-group" style="margin:10% 0 0 0 ">
+
+                    <div class="group2">
+                        <input class="form-control" type="number" required id="pa_asnafic">
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">Asnaf IC</label>
+                    </div>
+
+                    <div class="input-group-append btncls">
+                        <button class="btn btn-raised btn-info btn-block" id="pa_semak" type="button">Semak</button>
+                    </div>
+                </div>
+                <!--<div class="group">
+                    <input class="form-control" type="number" required id="pa_asnafic">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Asnaf IC</label>
+                </div>
+
+                <button class="btn btn-raised btn-info btn-block" id="pa_semak" type="button">Semak</button>-->
+            </div>
+            <div class="card" style="width: 100%;display:none" id="pa_card">
+
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="pa_nama">status</li>
+                    <li class="list-group-item" id="pa_ic">status</li>
+                    <li class="list-group-item" id="pa_status">status</li>
+
+                    <!--<li class="list-group-item" id="pa_ubah">
+                            <button class="btn btn-raised btn-info btn-block" style="margin:auto" type="button" id="pa_semakback">
+                                Kembali Semak Laporan
+                            </button>
+
+                    </li>-->
+
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- semak status -->
+    <!-- semak asnaf -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="pa_semakasnaf">
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Semak Asnaf</h2>
+        <div style="width:100%;">
+            <div id="pa_semakasnafDiv">
+                <div class="input-group" style="margin:10% 0 0 0 ">
+
+                    <div class="group2">
+                        <input class="form-control" type="number" required id="pa_semakAsnaficInput">
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">Asnaf IC</label>
+                    </div>
+
+                    <div class="input-group-append btncls">
+                        <button class="btn btn-raised btn-info btngrop" type="button" id="pa_semakAsnafBtn">Semak</button>
+                    </div>
+                </div>
+                <!--<div class="group">
+                    <input class="form-control" type="number" required id="pa_semakAsnaficInput">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Asnaf IC</label>
+                </div>
+
+                <button class="btn btn-raised btn-info btn-block" id="pa_semakAsnafBtn" type="button">Semak</button>-->
+            </div>
+            <div class="card" style="width: 100%;display:none" id="pa_semakasnafcard">
+
+
+                <ul class="list-group list-group-flush">
+                    <li class="" id="pa_semakAsnafNama">status</li>
+                    <li class="" id="pa_semakAsnafic">status</li>
+                    <li class="" id="pa_semakAsnafstatus">status</li>
+
+                    <!--<li class="list-group-item" id="pa_semakAsnafubah">
+                            <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="pa_semakAsnafback">
+                                Kembali Semak Laporan
+                            </button>
+
+                    </li>-->
+
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- semak status -->
+    <!-- semak status -->
+    <div class="modal" tabindex="-1" role="dialog" id="model3">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="lds-facebook" style="margin:auto"><div></div><div></div><div></div></div>
+
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/moment-with-locales.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../assets/js/swiper.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrQf8aLgESteUYdyESnqPehsVcU6QUudc"
+            async defer></script>
+    <script src="../assets/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="../scripts/penolongAmil.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js"></script>-->
+    <script src="../assets/js/Sidebar-Menu.js"></script>
+    <script src="../assets/js/Simple-Slider.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../scripts/bootbox.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            noSwiping: true,
+            noSwipingClass: '.swiper-container',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
+</body>
+
+</html>

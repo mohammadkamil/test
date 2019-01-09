@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Asnaf</title>
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../EasyAutocomplete/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="../EasyAutocomplete/easy-autocomplete.themes.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="../assets/css/Brands.css">
+    <link rel="stylesheet" href="../assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">-->
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form-1.css">
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="../assets/css/textarea.css">
+    <link rel="stylesheet" href="../assets/css/Material-Card.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <!-- Compiled and minified CSS -->
+    <script>
+        function onload() {
+            $("#setqareahli").hide();
+            $("#setPA").hide();
+            $("#lznk_tetapbatal").hide();
+        }
+     
+    </script>
+</head>
+
+<body id="body" onload="onload()">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="list-group ulcss" style="padding:0">
+                <li style="background-color:white;padding:5% 0;display:block"><center><img src="../assets/img/lznk.png" width="100px" height="100px" /></center></li>
+                <li class=" d-flex justify-content-between align-items-center" id="home"> Senarai Permohonan<br /><span class="badge badge-primary badge-light" id="newh">14</span> Tanpa Kariah   </li>
+                <li class=" " id="sLaporan"> Senarai Permohonan Mengikut Kariah</li>
+                <li class=" " id="semakLaporan"> Semak Status Permohonan</li>
+                <!--<li class="list-group-item  " id="semakLaporan">Semak Status Laporan</li>-->
+                <li class="  " id="semakasnaf"> Semak Asnaf</li>
+                <li class="  " id="logout"> Daftar Keluar </li>
+                <!--<li> <a style="font-size:110%;" id="home">Home </a></li>
+                <li> <a style="font-size:110%;" id="sLaporan">Senarai Laporan diluluskan </a></li>
+                <li> <a style="font-size:110%;" id="semakLaporan">Semak Status Laporan </a></li>
+                <li> <a style="font-size:110%;" id="semakasnaf">Semak Asnaf </a></li>
+                <li> <a style="font-size:110%;" id="profile">Profile </a></li>
+                <li> <a style="font-size:110%;" id="logout">Daftar Keluar </a></li>-->
+            </ul>
+        </div>
+        <div class="page-content-wrapper nowcss">
+            <div class="container-fluid mx-auto" style="color:rgb(255,255,255);"><a class="btn btn-flat" role="button" href="#menu-toggle" id="menu-toggle" style="margin-right:5%"><i class="fa fa-bars float-left" style="color:rgb(255,255,255);"></i></a><span class="mx-auto" style="font-family:Lato, sans-serif;font-size:120%;margin:auto;">Jejak Asnaf</span></div>
+        </div>
+    </div>
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="lznk_listreport">
+
+        <h6 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Permohonan Tanpa Kariah</h6>
+        <div class="list-group " id="list">
+
+        </div>
+    </div>
+
+
+    <div class="detailasnaf" id="lznk_detailreport">
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Detail Permohonan</h2>
+        <form id="form" style="overflow-y:scroll">
+
+            <div class="card" style="width: 100%;">
+
+                <div class="card-body">
+                    <h5 class="card-title" id="nama">Nama</h5>
+                    <h6 class="card-title" id="ic">IC</h6>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="status">status</li>
+                    <!--<li class="list-group-item" id="kaum">kaum</li>-->
+                    <li class="list-group-item" id="jenisbantuan" style="text-transform:uppercase">jenis bantuan</li>
+                    <li class="list-group-item" id="qareah">qareah</li>
+                    <li class="list-group-item" id="ligambar">
+                        <span>Gambar</span>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" id="gambarslide">
+                                <div class="swiper-slide" width="100%" height="250px" id="slide"><img src="../images/photo.png" width="90%" height="240px" id="gambar" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar1" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar2" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar3" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar4" /></div>
+                                <div class="swiper-slide" width="100%" height="250px" id="slide1"><img src="../images/photo.png" width="90%" height="240px" id="gambar5" /></div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" id="lihuraian">
+                        <span>Huraian</span>
+                        <h6 id="huraian"></h6>
+                    </li>
+                    <li class="list-group-item" id="limap"><div id="map" style="height:250px;width:100%"></div></li>
+                    <li class="list-group-item" id="lialamat">
+                        <span>Alamat</span>
+
+                        <h6 id="alamat"></h6>
+                    </li>
+                    <li class="list-group-item" id="latlng"></li>
+                    <li class="list-group-item" id="setqareahli" style="margin:0">
+                        <select class="custom-select" name="qareah" id="selectqareah" style="margin:0">
+
+                            <option value="" disabled selected>Pilih Kariah</option>
+
+                        </select>
+
+                    </li>
+                    <li class="list-group-item" id="setPA" style="margin:0">
+                        <select class="custom-select" name="amil" id="amil" disabled style="margin:0">
+
+                            <option value="" disabled selected>Pilih Penolong Amil</option>
+
+                        </select>
+                    </li>
+                    <li class="list-group-item" id="ubah">
+                        <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="lznk_lulus">
+                            Diluluskan
+                        </button><button class="btn btn-raised btn-dark btn-block" style="margin:auto;margin-top:5%" type="button" id="lznk_tolak">
+                            Tidak Layak
+                        </button>
+
+                    </li>
+
+                    <li class="list-group-item" id="setqareah">
+                        <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="lznk_tetapqareah">
+                            Tetapkan Kariah
+                        </button><button class="btn btn-raised btn-warning btn-block" style="margin:auto;margin-top:5%" type="button" id="lznk_tetapbatal">
+                            Batal
+                        </button><button class="btn btn-raised btn-dark btn-block" style="margin:auto;margin-top:5%" type="button" id="lznk_lapoantidakberkaitan">
+                            Tidak berkaitan
+                        </button>
+
+                    </li><li class="list-group-item" id="reminderbtn">
+                        <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="lznk_btnreminder">
+                          Hantar Peringatan
+                        </button>  <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="lznk_reminderback">
+                          Kembali
+                        </button>
+                    <!--<button class="btn btn-raised btn-warning btn-block" style="margin:auto;margin-top:5%" type="button" id="lznk_tetapbatal">
+                            Batal
+                        </button><button class="btn btn-raised btn-dark btn-block" style="margin:auto;margin-top:5%" type="button" id="lznk_lapoantidakberkaitan">
+                            Tidak berkaitan
+                        </button>-->
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </form>
+    </div>
+    <!-- senarai laporan diambil -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="lznk_listreportambil">
+
+        <h3 class="text-center font-weight-light" style="color:rgb(0,0,0);margin:0;">Permohonan Mengikut Daerah</h3>
+        <ul class="list-group" style="padding:0" id="listqareah"></ul>
+
+        <!--<div class="list-group " id="listqareah">
+
+        </div>-->
+    </div>
+
+
+    <!-- senarai laporan diambil -->
+    <!-- senarai laporan by qareah -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="lznk_listreportkariah" style="display:none">
+
+        <h3 class="text-center font-weight-light" style="color:rgb(0,0,0);margin:0;" id="qareahnama">Permohonan Di Kariah</h3>
+        <ul class="list-group" style="padding:0" id="listpermohonan"></ul>
+
+        <!--<div class="list-group " id="listqareah">
+
+        </div>-->
+    </div>
+
+
+    <!-- senarai laporan by qareah -->
+    <!-- semak status -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="lznk_semakstatus">
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Semak Laporan</h2>
+        <div style="width:100%;">
+            <div id="lznk_semakDiv">
+                <div class="input-group" style="margin:10% 0 0 0 ">
+
+                    <div class="group2">
+                        <input class="form-control" type="number" required id="lznk_asnafic">
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">Asnaf IC</label>
+                    </div>
+
+                    <div class="input-group-append btncls">
+                        <button class="btn btn-raised btn-info btn-block" id="lznk_semak" type="button">Semak</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card" style="width: 100%;display:none" id="lznk_card">
+
+                <div class="card-body">
+                    <h5 class="card-title" id="lznk_nama">Nama</h5>
+                    <h6 class="card-title" id="lznk_ic">IC</h6>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="lznk_status" style="margin:0"></li>
+
+
+
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- semak status -->
+    <!-- semak asnaf -->
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf" id="lznk_semakasnaf">
+
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Semak Asnaf</h2>
+        <div style="width:100%;">
+            <div id="lznk_semakasnafDiv">
+                <div class="input-group" style="margin:10% 0 0 0 ">
+
+                    <div class="group2">
+                        <input class="form-control" type="number" required id="lznk_semakAsnaficInput">
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="labelStyle">Asnaf IC</label>
+                    </div>
+
+                    <div class="input-group-append btncls">
+                        <button class="btn btn-raised btn-info btn-block" id="lznk_semakAsnafBtn" type="button">Semak</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card" style="width: 100%;display:none" id="lznk_semakasnafcard">
+
+                <!--<div class="card-body">
+                    <h5 class="card-title" id="lznk_semakAsnafnama">Nama</h5>
+                    <h6 class="card-title" id="lznk_semakAsnafic">IC</h6>
+
+                </div>-->
+                <ul class="list-group list-group-flush">
+                    <li class="" id="lznk_semakAsnafNama">status</li>
+                    <li class="" id="lznk_semakAsnafic">status</li>
+                    <li class="" id="lznk_semakAsnafstatus"></li>
+
+                    <li class="list-group-item" id="lznk_semakAsnafubah">
+                        <button class="btn btn-raised btn-dark btn-block" style="margin:auto" type="button" id="lznk_semakAsnafback">
+                            Kembali Semak Laporan
+                        </button>
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- semak status -->
+    <div class="modal" tabindex="-1" role="dialog" id="model3">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="lds-facebook" style="margin:auto"><div></div><div></div><div></div></div>
+
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../assets/js/swiper.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrQf8aLgESteUYdyESnqPehsVcU6QUudc"
+            async defer></script>
+    <script src="../assets/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="../scripts/lznk.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js"></script>-->
+    <script src="../assets/js/Sidebar-Menu.js"></script>
+    <script src="../assets/js/Simple-Slider.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../scripts/bootbox.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+</body>
+
+</html>

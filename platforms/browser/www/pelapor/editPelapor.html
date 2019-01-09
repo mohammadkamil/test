@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Asnaf</title>
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="../assets/css/Brands.css">
+    <link rel="stylesheet" href="../assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">-->
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form-1.css">
+    <link rel="stylesheet" href="../assets/css/responsive-registration-form.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="../assets/css/textarea.css">
+    <link rel="stylesheet" href="../assets/css/Material-Card.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+
+</head>
+<body id="body">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="list-group ulcss" style="padding:0">
+                <li style="background-color:white;padding:5% 0;display:block"><center><img src="../assets/img/lznk.png" width="100px" height="100px" /></center></li>
+                <!--  <li class="sidebar-brand"> <a href="#" style="font-size:110%;">Home </a></li>-->
+                <li class="" id="home">Memohon Bantuan </li>
+                <li id="sLaporan">Senarai Permohonan </li>
+                <li id="semakLaporan">Semak Status Permohonan </li>
+                <li id="profile">Profile </li>
+                <li id="logout">Daftar Keluar </li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper nowcss">
+            <div class="container-fluid mx-auto" style="color:rgb(255,255,255);"><a class="btn btn-flat" role="button" href="#menu-toggle" id="menu-toggle" style="margin-right:5%"><i class="fa fa-bars float-left" style="color:rgb(255,255,255);"></i></a><span class="mx-auto" style="font-family:Lato, sans-serif;font-size:120%;margin:auto;">Jejak Asnaf</span></div>
+        </div>
+    </div>
+    <div class="m-auto w-lg-75 w-xl-50 detailasnaf">
+        <h2 class="text-center font-weight-light" style="color:rgb(0,0,0);font-size:33px;margin:0;">Profile</h2>
+        <form>
+            <!--<div style=" height: 150px; width: 100%;">
+                <center>
+                    <img id="uploadimg" class="rounded-circle d-table align-items-center align-content-center align-self-center mx-auto" src="images/profile-icon-png-917.png" style="object-fit: fill;margin:5% 0;width: 150px;height: 150px">
+
+                </center>
+            </div>-->
+            <div class="group">
+                <input type="text" required id="nama">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Nama</label>
+            </div>
+            <div class="group">
+                <input type="number" required id="ic">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label class="labelStyle">IC number(eg:912112022222)</label>
+            </div><div class="group">
+                <input type="number" required id="noTel">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label class="labelStyle">No Telefon(eg:01123456789)</label>
+            </div> <div class="group">
+                <input type="text" id="nameorganisasi">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label class="labelStyle">Nama Organisasi</label>
+            </div>
+            <!--<select class="custom-select selectStyle" id="kaum"><optgroup label="Kaum"><option value="1">Melayu</option><option value="2">Chinese</option><option value="3">Indian</option><option value="4">Lain-Lain</option></optgroup></select>
+            <select class="form-control" id="agama">
+                <optgroup label="Agama">
+                    <option value="1">Islam</option>
+                    <option value="2">Bhudha</option>
+                    <option value="3">Christianity </option>
+                    <option value="4">Hinduism </option>
+                    <option value="5">Lain-lain</option>
+                </optgroup>
+            </select>
+            <textarea class="form-control form-control-lg" rows="3" placeholder="Alamat" style="margin:5% 0;padding:0;height:35%;width:100%;" id="alamat"></textarea>-->
+            <label style="position:relative;color:#5264AE">Email</label>
+            <input type="text" required id="email" disabled>
+
+
+
+            <div class="group">
+                <input type="text" required id="password">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Password</label>
+            </div>
+
+            <button class="btn btn-raised btn-info float-right" type="button" id="btnUpdate">Kemas Kini</button><button class="btn btn-dark float-left"
+                                                                                                                        type="button" id="btncancel">
+                Cancel
+            </button>
+        </form>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="model">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Source Photo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-10" style="margin-bottom:5%">
+                        <button class="btn btn-raised btn-info btn-block" type="button" id="camerabtn">
+                            Camera
+                        </button>
+                    </div>
+                    <div class="col-10">
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" id="librarybtn">Photo Library</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../assets/js/swiper.min.js"></script>
+
+    <script src="../assets/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="../scripts/editProfile.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+
+    <script src="../assets/js/Sidebar-Menu.js"></script>
+    <script src="../assets/js/Simple-Slider.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../scripts/bootbox.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+</body>
+</html>
