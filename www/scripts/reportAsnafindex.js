@@ -236,7 +236,7 @@ var daerahid, qareahid;
         $("#page3").hide();
         $("#page4").show();
        
-
+alert(0);
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
 alert(1);
     };  function back2() {
