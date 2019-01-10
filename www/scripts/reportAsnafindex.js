@@ -236,9 +236,7 @@ var daerahid, qareahid;
         $("#page3").hide();
         $("#page4").show();
        
-alert(0);
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-alert(1);
     };  function back2() {
         $("#page2").hide();
         $("#page1").show();
@@ -284,8 +282,6 @@ function geocodeLatLng(geocoder, map,lat,lng) {
     // onError Callback receives a PositionError object
     //
     var onSuccess = function (position) {
-		alert(1);
-		alert(position.coords.longitude);
           map = new google.maps.Map(document.getElementById('map'), {
             zoom: 11,
             center: { lat: position.coords.latitude, lng: position.coords.longitude }
@@ -297,7 +293,6 @@ function geocodeLatLng(geocoder, map,lat,lng) {
 // onError Callback receives a PositionError object
 //
 function onError(error) {
-	alert(10);
     //alert('code: ' + error.code + '\n' +
     //    'message: ' + error.message + '\n');
 }
