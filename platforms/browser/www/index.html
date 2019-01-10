@@ -33,6 +33,7 @@
         //    location.href = "pelapor/reportAsnaf.html";
         //}
         function onLoad() {
+            alert(localStorage.getItem("login") + " " + localStorage.getItem("userType"));
             if (localStorage.getItem("login") == 1 && localStorage.getItem("userType") == 1) {
                 location.href = "pelapor/reportAsnaf.html";
             } else if (localStorage.getItem("login") == 1 && localStorage.getItem("userType") == 2) {
